@@ -15,7 +15,7 @@ There are two options: "fadeDuration" and "fadePosition" which you can pass into
 
 <h2>Usage</h2>
 
-<h2> HTML: </h2>
+<h3> HTML: </h3>
 
 basic usage:
 
@@ -33,7 +33,7 @@ $('yourElements').fadeInElements({
 
 ```
 
-<h2> CSS: </h2>
+<h3> CSS: </h3>
 
 ```
 yourelements {
