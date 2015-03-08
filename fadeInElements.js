@@ -62,5 +62,8 @@
 			}//end fadestuff function
 		};//end fadeelements Object
 		fadeElements.fadeStuff();
+		$(window).scroll(function() {
+			fadeElements.fadeStuff();
+		});
     };//end fadeinelements function
 }( jQuery ));
