@@ -1,11 +1,7 @@
-//You can pass two options - "fadeDuration and fadePosition".  Fadeposition lets you trigger the fade higher up the page....it's given in percents of the window height. 
-// make sure to set the opacity of the .triggerFade class to "0" in your css.
-// usage $('.triggerFade').fadeInElements();
-// $('yourElements').fadeInElements({
-// 		fadeDuration: 5000,
-//  	fadePosition: 25
-// });
-//fade position doesn't work quite right
+/* 
+	Author: Ryan Haas
+	Repo: https://github.com/Ryan8765/Fade-in-Elements-Scroll
+*/
 
 (function ( $ ) {
 	var fadeInElementsObject =  {
