@@ -1,5 +1,5 @@
 /* 
-	Author: Ryan Haas
+	Author: Ryan H
 	Repo: https://github.com/Ryan8765/Fade-in-Elements-Scroll
 */
 
@@ -26,9 +26,8 @@
 			elementsToFadeIn: elements,
 			initialLength: elements.length,
 			fadeStuff: function() {
-				//gets the max value from alreadyFaded and subtracts that from initialLength.  Use this to fadein elements at the bottom of the page when scrolled to bottom and using the 'fadePosition' option
-				var elemsNotFadedInLength = (this.initialLength) - (Math.max.apply(null, fadeInElementsObject.alreadyFaded));
-				
+				//max index of elements already faded in
+				var maxIndexAlreadyFaded = (Math.max.apply(null, fadeInElementsObject.alreadyFaded));			
 				//current element to look for distance from top of document
 				var currentElement;
 				//distance from top of element to top of document
@@ -37,7 +36,6 @@
 				var scrollPosition;
 				//if all of the fadein elements aren't showing yet check for them on scroll..otherwise bypass this to save computing
 				if (fadeInElementsObject.alreadyFaded.length < this.initialLength) {
-					console.log('testing testing 1');
 					//for loop to go through all of elements and see if they are within view
 					for (var i = 0; i < this.initialLength; i++) {
 						//if you have already shown element continue on 
@@ -53,7 +51,15 @@
 							currentElement.fadeTo(this.fadeTime, 1);
 							fadeInElementsObject.alreadyFaded.push(i);
 						}//end if
-					}//end for	
+					}//end for
+					//if you hit bottom of page on scroll make sure to fade in remaining elements all the way to the end of the document.
+					if (scrollPosition + window.innerHeight > $(document).height() - 10 && fadeInElementsObject.fadeAllTriggered === "no") {
+						//find elements not yet faded in and fade them in
+						for(var i = maxIndexAlreadyFaded; i < this.initialLength; i++) {
+							elements.eq(i).fadeTo(this.fadeTime, 1);
+						}//end for
+						fadeInElementsObject.fadeAllTriggered = "yes";
+					}//end if	
 				}//end if
 			}//end fadestuff function
 		};//end fadeelements Object

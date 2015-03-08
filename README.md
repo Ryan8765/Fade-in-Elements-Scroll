@@ -3,11 +3,14 @@ A jquery plugin to fade in elements on scroll
 
 <h2>Description</h2>
 
-This jquery plugin allows you to fade in elements as you scroll down the page for a neat effect. 
+This jquery plugin allows you to fade in elements as you scroll down the page. 
 
 <h2>Demo</h2>
+- No options:
+http://jsfiddle.net/john23/p4xre4up/7/
 
-http://jsfiddle.net/john23/p4xre4up/5/
+- fadeDuration set to 1000 and fadePosition set to 25:
+http://jsfiddle.net/john23/e8wfk0gn/3/
 
 <h2>Options</h2>
 
@@ -15,9 +18,18 @@ There are two options: "fadeDuration" and "fadePosition" which you can pass into
 
 <h2>Usage</h2>
 
-<h3> HTML: </h3>
+<h3>Script tag</h3>
+Include a script tag in your HTML to reference the plugin:
 
-basic usage:
+```
+<script src = "fadeInElements.js"></script>
+
+```
+
+
+<h3> Javascript: </h3>
+
+Basic usage:
 
 ```
 $('yourElements').fadeInElements();

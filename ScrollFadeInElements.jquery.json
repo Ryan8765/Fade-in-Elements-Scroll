@@ -1,0 +1,19 @@
+{
+    "name": "ScrollFadeInElements",
+    "title": "Scroll Fade In Elements",
+    "description": "jQuery plugin to fade in elements on page scroll.",
+    "version": "1.1.2",
+    "author": {
+        "name": "Ryan H",
+        "url": "https://github.com/Ryan8765/Fade-in-Elements-Scroll"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/Ryan8765/Fade-in-Elements-Scroll/blob/master/LICENSE"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
